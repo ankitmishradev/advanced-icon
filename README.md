@@ -31,40 +31,6 @@ import 'package:advanced_icon/advanced_icon.dart';
 - A lot of cool animation effects are availble to animate between icon and secondary icon.
 - No need to manage animation controller and animations manually.
 
-## Decoration
-
-### Gradient
-
-Add gradient to your icons and make them look more appealing. Specify a gradient to the gradient property of the widget as follows:
-<br>
-
-```dart
-AdvancedIcon(
-  icon:Icons.favorite,
-  gradient:const LinearGradient(
-    colors: <Color>[Colors.red, Colors.pink],
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
-    step: [0.2,0.8],
-  ),
-)
-```
-
-### Opacity
-
-Make your icons opaque just by setting the opacity property of the widget. Opacity must be between 0 and 1 including 0 and 1.
-<br>
-
-```dart
-AdvancedIcon(
-  icon:Icons.apple,
-  color: Colors.blue,
-  opacity:0.5,
-)
-```
-
-![Decoration Banner](https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.png?raw=true)
-
 ## Change Icon With Animation
 
 To animate between two icons `secondaryIcon` must not be null and whenever it is not null the widget will look up to `state` and will render only one icon accordingly. To animate the icon from `icon` to `secondaryIcon` or vice versa let's first manage the state of the widget:
@@ -124,6 +90,34 @@ class _ExampleState extends State<Example> {
 }
 
 ```
+
+## Decoration
+
+### Gradient
+
+```dart
+AdvancedIcon(
+  icon:Icons.favorite,
+  gradient:const LinearGradient(
+    colors: <Color>[Colors.red, Colors.pink],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    step: [0.2,0.8],
+  ),
+)
+```
+
+### Opacity
+
+```dart
+AdvancedIcon(
+  icon:Icons.apple,
+  color: Colors.blue,
+  opacity:0.5,
+)
+```
+
+<img src="https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.png?raw=true">
 
 ## Changelog
 
