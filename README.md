@@ -36,7 +36,7 @@ import 'package:advanced_icon/advanced_icon.dart';
 ### Gradient
 
 <img src='https://github.com/ankitmishradev/advanced-icon/blob/main/display/gradient_demo.png?raw=true' align = "right" height = "200px" width="200px">
-Add gradient to your icons and make them look more appealing by specifying a gradient in the gradient property of the widget as follows:
+Add gradient to your icons and make them look more appealing.
 
 ```dart
 AdvancedIcon(
@@ -52,8 +52,8 @@ AdvancedIcon(
 
 ### Opacity
 
-<img src='https://github.com/ankitmishradev/advanced-icon/blob/main/display/opacity_demo.png?raw=true' align = "right" height = "200px" width="200px">
-Make your icons opaque just by setting the opacity property of the widget. Opacity must be between 0 and 1 including 0 and 1. See an example below which better illustrate opacity property of this widget:
+<img src='https://github.com/ankitmishradev/advanced-icon/blob/main/display/opacity_demo.png?raw=true' align = "right" height = "200px" width="200px" style="margin-left:20px">
+Make your icons opaque just by setting the opacity property of the widget. Opacity must be between 0 and 1 including 0 and 1.
 
 ```dart
 AdvancedIcon(
