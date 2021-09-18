@@ -1,8 +1,8 @@
 <p align="center"><img src="https://github.com/ankitmishradev/advanced-icon/blob/main/display/banner.png?raw=true"/></p>
 
-<h1>Advanced Icon</h1>
+# Advanced Icon
 
-<p>A flutter package which contains a collection of icon decoration tools such as gradient, opacity and animations to change the icons smoothly.</p>
+A flutter package which contains collection of icon decoration tools such as gradient, opacity and icon transition feature with a lot of cool animation effects.
 
 [![build](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml/badge.svg)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)
 [![License](https://img.shields.io/github/license/ankitmishradev/advanced-icon)](https://opensource.org/licenses/MIT)
@@ -25,15 +25,15 @@ import 'package:advanced_icon/advanced_icon.dart';
 
 ## Features at a Glance
 
-1. In addition to color icons can also be painted with gradient.
-2. Opacity property is avaible to make opaque icons.
-3. An optional `secondaryIcon` property is also availble to enhance user interation.
-4. A lot of cool animation effects are availble to animate between `icon` and `secondaryIcon` transition.
-5. No need to manage animation controller and animations manually.
+1. An optional `secondaryIcon` property is available to enhance user interaction with minimal manual effort.
+2. A lot of cool animation effects are available to make smooth transition between `icon` and `secondaryIcon`.
+3. In addition to color, icons can also be painted with gradient.
+4. Opacity property is available to make opaque icons.
+5. Inherits all properties of material designed `Icon` widget.
 
 ## Icon Transition
 
-To use icon transition feature, `secondaryIcon` must not be null and whenever it is not null the widget will look up for `state` and will show icons accordingly. To change the icon from `icon` to `secondaryIcon` or vice versa, let's first manage the state of the widget:
+To use icon transition feature, `secondaryIcon` must not be null and when it is not null the widget will look up for `state` and will show icons according to current state. To change the icon from `icon` to `secondaryIcon` or vice-versa, let's first manage the state of the widget:
 
 ### 1. Manage state
 
@@ -42,7 +42,7 @@ To use icon transition feature, `secondaryIcon` must not be null and whenever it
 1. `AdvancedIconState.primary`
 2. `AdvancedIconState.secondary`
 
-Whenever the state changes, it notifies the widget and widget changes the current icon following the below rules:
+Whenever the state changes, it notifies the widget and widget changes the current icon following below rules:
 
 1. `icon` will appear for `AdvancedIconState.primary`.
 2. `secondaryIcon` will appear for `AdvancedIconState.secondary`.
@@ -117,6 +117,8 @@ AdvancedIcon(
   opacity:0.5,
 )
 ```
+
+## Result
 
 ![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.png?raw=true)
 
