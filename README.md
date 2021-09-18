@@ -30,9 +30,18 @@ Now in your `Dart` code, you can use:
 import 'package:advanced_icon/advanced_icon.dart';
 ```
 
-## Features
+## Features at a Glance
+
+- Icons can be painted with gradient in addition to color.
+- Opacity property is avaible to make opaque icons.
+- A secondary icon property is also availble to be used in place of icon as per current state.
+- A lot of cool animation effects are availble to animate between icon and secondary icon.
+- No need to manage animation controller and animations manually.
 
 ## Decoration
+
+- ### Gradient:
+- ### Opacity:
 
 ## State Management
 
