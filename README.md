@@ -3,16 +3,9 @@
 <h1>Advanced Icon</h1>
 
 <p>A flutter package which contains a collection of icon decoration tools such as gradient, opacity and animations to change the icons smoothly.</p>
-<div>
-<a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/github/license/ankitmishradev/advanced-icon"
-      alt="License: MIT" />
-  </a>
-  <a href="https://github.com/aagarwal1012/Animated-Text-Kit/actions?query=workflow%3ACI">
-    <img src="https://github.com/ankitmishradev/advanced-icon/actions/workflows/dart.yml/badge.svg"
-      alt="Build Status" />
-  </a>
-</div>
+
+[![build](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml/badge.svg)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)
+[![License](https://img.shields.io/github/license/ankitmishradev/advanced-icon)](https://opensource.org/licenses/MIT)
 
 ## Installing
 
@@ -40,10 +33,80 @@ import 'package:advanced_icon/advanced_icon.dart';
 
 ## Decoration
 
-- ### Gradient:
-- ### Opacity:
+### Gradient:
+
+Add gradient to your icons and make them look more appealing by specifying gradient in gradient property of the widget as follows:
+
+```dart
+AdvancedIcon(
+  icon:Icons.home,
+  gradient:const LinearGradient(
+    colors: <Color>[Color(0xFFFF0000), Color(0xFFF008CB)],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    step: [0.2,0.8],
+  ),
+)
+```
+
+### Opacity:
+
+Make your icons opaque just by setting the opacity property of the widget. Opacity must be between 0 and 1(including 0 and 1). See an example below:
+
+```dart
+AdvancedIcon(
+  icon:Icons.home,
+  opacity:0.5,
+)
+```
 
 ## State Management
+
+### AdvancedIconState
+
+This property holds the information about the current state of the widget and notify the widget to show `icon` for the `AdvancedIconState.primary` and `secondaryIcon` for `AdvancedIconState.secondary`. `AdvancedIconState` can be changed using any of the following methods:
+
+- setState
+- provider
+- stream
+- inheritedWidget
+
+Typically, setState will be used to change the state of the widget, as follows:
+
+```dart
+class Example extends StatefulWidget {
+  const Example({Key? key}) : super(key: key);
+
+  @override
+  _ExampleState createState() => _ExampleState();
+}
+
+class _ExampleState extends State<Example> {
+  AdvancedIconState _state=AdvancedIconState.primary;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          if (_state == AdvancedIconState.primary) {
+            _state = AdvancedIconState.secondary;
+          } else {
+            _state == AdvancedIconState.primary;
+          }
+        });
+      },
+      child: AdvancedIcon(
+        icon: Icons.add,
+        secondaryIcon: Icons.check,
+        state: \_state,
+        effect: AdvancedIconEffect.bubble,
+      ),
+    );
+  }
+}
+
+```
 
 ## Changelog
 
@@ -56,3 +119,7 @@ Contribution to this project are most welcomed.
 If you find any bug or want any feature/improvement, but don't know how to fix/implement it, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/issues).
 
 If you fixed any bug or implemented any new feature/improvement, please send a [pull request](https://github.com/ankitmishradev/advanced-icon/pulls).
+
+```
+
+```
