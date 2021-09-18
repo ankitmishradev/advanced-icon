@@ -93,6 +93,8 @@ class _ExampleState extends State<Example> {
 
 ## Decoration
 
+<img src="https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.png?raw=true" align="right">
+
 ### Gradient
 
 ```dart
@@ -116,8 +118,6 @@ AdvancedIcon(
   opacity:0.5,
 )
 ```
-
-<img src="https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.png?raw=true">
 
 ## Changelog
 
