@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/ankitmishradev/advanced-icon/blob/main/display/header.png?raw=true"/></p>
+<p align="center"><img src="https://github.com/ankitmishradev/advanced-icon/blob/main/display/banner.png?raw=true"/></p>
 
 # Advanced Icon
 
