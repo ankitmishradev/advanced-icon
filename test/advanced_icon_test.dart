@@ -4,7 +4,13 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets("Flutter Widget Test", (WidgetTester tester) async {
-    await tester.pumpWidget(const AdvancedIcon(icon: Icons.home));
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(
+          body: AdvancedIcon(icon: Icons.home),
+        ),
+      ),
+    );
     var textField = find.byType(Icon);
     expect(textField, findsOneWidget);
   });
