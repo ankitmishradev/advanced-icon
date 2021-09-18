@@ -12,7 +12,7 @@ A flutter package which contains collection of icon decoration tools such as gra
 With flutter run this command
 
 ```console
-$ flutter pub add flutter_staggered_grid_view
+$ flutter pub add advanced_icon
 ```
 
 This will add a line like this to your package's `pubspec.yaml` (and run an implicit flutter pub get):
@@ -118,7 +118,7 @@ AdvancedIcon(
 ```dart
 AdvancedIcon(
   icon: Icons.direction_bike,
-  color: Colors.blue,
+  color: Colors.red,
   opacity: 0.5,
 )
 ```
