@@ -105,9 +105,9 @@ class _ExampleState extends State<Example> {
 AdvancedIcon(
   icon: Icons.photo_camera,
   gradient: const LinearGradient(
-    colors: <Color>[Colors.red, Colors.pink],
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
+    colors: <Color>[Colors.red, Colors.green],
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
     step: [0.2,0.8],
   ),
 )
@@ -123,7 +123,7 @@ AdvancedIcon(
 )
 ```
 
-### Result
+### Decoration Result
 
 ![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.png?raw=true)
 
@@ -134,6 +134,8 @@ Please see the [CHANGELOG](https://github.com/ankitmishradev/advanced-icon/blob/
 ## Contributions
 
 Contribution to this project are most welcomed.
+
+## Bugs & Fixes
 
 If you find any bug or want any feature/improvement, but don't know how to fix/implement it, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/issues).
 
