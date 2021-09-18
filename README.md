@@ -7,6 +7,8 @@
 [![build](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml/badge.svg)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)
 [![License](https://img.shields.io/github/license/ankitmishradev/advanced-icon)](https://opensource.org/licenses/MIT)
 
+---
+
 ## Installing
 
 Add this package to your flutter project's `pubspec.yaml` file:
@@ -23,6 +25,8 @@ Now in your `Dart` code, you can use:
 import 'package:advanced_icon/advanced_icon.dart';
 ```
 
+---
+
 ## Features at a Glance
 
 - Icons can be painted with gradient in addition to color.
@@ -31,18 +35,20 @@ import 'package:advanced_icon/advanced_icon.dart';
 - A lot of cool animation effects are availble to animate between icon and secondary icon.
 - No need to manage animation controller and animations manually.
 
+---
+
 ## Decoration
 
-### Gradient:
+### Gradient
 
-<img src='https://github.com/ankitmishradev/advanced-icon/blob/main/display/gradient_demo.png?raw=true' align = "right" height = "256px">
-Add gradient to your icons and make them look more appealing by specifying gradient in gradient property of the widget as follows:
+<img src='https://github.com/ankitmishradev/advanced-icon/blob/main/display/gradient_demo.png?raw=true' align = "right" height = "200px" width="200px">
+Add gradient to your icons and make them look more appealing by specifying a gradient in the gradient property of the widget as follows:
 
 ```dart
 AdvancedIcon(
-  icon:Icons.home,
+  icon:Icons.favorite,
   gradient:const LinearGradient(
-    colors: <Color>[Color(0xFFFF0000), Color(0xFFF008CB)],
+    colors: <Color>[Colors.red, Colors.pink],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
     step: [0.2,0.8],
@@ -50,24 +56,38 @@ AdvancedIcon(
 )
 ```
 
-### Opacity:
+### Opacity
 
-<img src='https://github.com/ankitmishradev/advanced-icon/blob/main/display/opacity_demo.png?raw=true' align = "right" height = "256px">
-Make your icons opaque just by setting the opacity property of the widget. Opacity must be between 0 and 1(including 0 and 1). See an example below:
+<img src='https://github.com/ankitmishradev/advanced-icon/blob/main/display/opacity_demo.png?raw=true' align = "right" height = "200px" width="200px">
+Make your icons opaque just by setting the opacity property of the widget. Opacity must be between 0 and 1 including 0 and 1. See an example below which better illustrate opacity property of this widget:
 
 ```dart
 AdvancedIcon(
-  icon:Icons.home,
-  color: Color(0xFF000AFF),
+  icon:Icons.apple,
+  color: Colors.blue,
   opacity:0.5,
 )
 ```
 
-## State Management
+---
 
-### AdvancedIconState
+## Change Icon With Animation
 
-This property holds the information about the current state of the widget and notify the widget to show `icon` for the `AdvancedIconState.primary` and `secondaryIcon` for `AdvancedIconState.secondary`. `AdvancedIconState` can be changed using any of the following methods:
+To animate between two icons `secondaryIcon` must not be null and whenever it is not null the widget will look up to `state` and will render only one icon accordingly. To animate the icon from `icon` to `secondaryIcon` or vice versa let's first manage the state of the widget:
+
+### 1. Manage state
+
+This property holds the information about the current state of the widget. This widget can have any one of the following states:
+
+1. `AdvancedIconState.primary`
+2. `AdvancedIconState.secondary`
+
+Whenever the state changes, it notifies the widget about the changes and then widget changes the current icon displayed on the screen following the below rules:
+
+1. `icon` will render for `AdvancedIconState.primary`.
+2. `secondaryIcon` will render for `AdvancedIconState.secondary`.
+
+`AdvancedIconState` can be changed using any of the following methods:
 
 - setState
 - provider
