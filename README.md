@@ -7,8 +7,6 @@
 [![build](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml/badge.svg)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)
 [![License](https://img.shields.io/github/license/ankitmishradev/advanced-icon)](https://opensource.org/licenses/MIT)
 
----
-
 ## Installing
 
 Add this package to your flutter project's `pubspec.yaml` file:
@@ -25,8 +23,6 @@ Now in your `Dart` code, you can use:
 import 'package:advanced_icon/advanced_icon.dart';
 ```
 
----
-
 ## Features at a Glance
 
 - Icons can be painted with gradient in addition to color.
@@ -34,8 +30,6 @@ import 'package:advanced_icon/advanced_icon.dart';
 - A secondary icon property is also availble to be used in place of icon as per current state.
 - A lot of cool animation effects are availble to animate between icon and secondary icon.
 - No need to manage animation controller and animations manually.
-
----
 
 ## Decoration
 
@@ -68,8 +62,6 @@ AdvancedIcon(
   opacity:0.5,
 )
 ```
-
----
 
 ## Change Icon With Animation
 
@@ -142,7 +134,3 @@ Contribution to this project are most welcomed.
 If you find any bug or want any feature/improvement, but don't know how to fix/implement it, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/issues).
 
 If you fixed any bug or implemented any new feature/improvement, please send a [pull request](https://github.com/ankitmishradev/advanced-icon/pulls).
-
-```
-
-```
