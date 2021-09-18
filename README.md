@@ -123,7 +123,7 @@ AdvancedIcon(
 )
 ```
 
-## Result
+### Result
 
 ![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.png?raw=true)
 
