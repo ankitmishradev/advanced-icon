@@ -33,10 +33,10 @@ import 'package:advanced_icon/advanced_icon.dart';
 
 ## Decoration
 
-### Gradient
+<div style="display:flex">
+<div style="flex:50%">
 
-<img src='https://github.com/ankitmishradev/advanced-icon/blob/main/display/gradient_demo.png?raw=true' align = "right" height = "200px" width="200px">
-Add gradient to your icons and make them look more appealing.
+### Gradient
 
 ```dart
 AdvancedIcon(
@@ -50,10 +50,10 @@ AdvancedIcon(
 )
 ```
 
-### Opacity
+</div>
+<div style="flex:50%">
 
-<img src='https://github.com/ankitmishradev/advanced-icon/blob/main/display/opacity_demo.png?raw=true' align = "right" height = "200px" width="200px" style="margin-left:20px">
-Make your icons opaque just by setting the opacity property of the widget. Opacity must be between 0 and 1 including 0 and 1.
+### Opacity
 
 ```dart
 AdvancedIcon(
@@ -62,6 +62,9 @@ AdvancedIcon(
   opacity:0.5,
 )
 ```
+
+</div>
+</div>
 
 ## Change Icon With Animation
 
