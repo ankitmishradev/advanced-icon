@@ -4,8 +4,8 @@
 
 A flutter package which contains collection of icon decoration tools such as gradient, opacity and icon transition feature with cool animation effects.
 
-[![build](https://img.shields.io/github/workflow/status/ankitmishradev/advanced-icon/build/main)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)
-[![License](https://img.shields.io/github/license/ankitmishradev/advanced-icon?color=red)](https://opensource.org/licenses/MIT)
+[![Build Status](https://img.shields.io/github/workflow/status/ankitmishradev/advanced-icon/build/main)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)
+[![MIT License](https://img.shields.io/github/license/ankitmishradev/advanced-icon?color=red)](https://opensource.org/licenses/MIT)
 
 ## Installing
 
