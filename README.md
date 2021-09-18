@@ -63,6 +63,8 @@ AdvancedIcon(
 )
 ```
 
+![Decoration Banner](https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.png?raw=true)
+
 ## Change Icon With Animation
 
 To animate between two icons `secondaryIcon` must not be null and whenever it is not null the widget will look up to `state` and will render only one icon accordingly. To animate the icon from `icon` to `secondaryIcon` or vice versa let's first manage the state of the widget:
