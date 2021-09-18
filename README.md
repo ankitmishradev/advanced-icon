@@ -2,19 +2,24 @@
 
 # Advanced Icon
 
-A flutter package which contains collection of icon decoration tools such as gradient, opacity and icon transition feature with a lot of cool animation effects.
+A flutter package which contains collection of icon decoration tools such as gradient, opacity and icon transition feature with cool animation effects.
 
 [![build](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml/badge.svg)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)
 [![License](https://img.shields.io/github/license/ankitmishradev/advanced-icon)](https://opensource.org/licenses/MIT)
 
 ## Installing
 
-Add this package to your flutter project's `pubspec.yaml` file:
+With flutter run this command
+
+```console
+$ flutter pub add flutter_staggered_grid_view
+```
+
+This will add a line like this to your package's `pubspec.yaml` (and run an implicit flutter pub get):
 
 ```yaml
 dependencies:
-    ...
-    advanced_icon: <latest version>
+  advanced_icon: <latest version>
 ```
 
 Now in your `Dart` code, you can use:
@@ -26,7 +31,7 @@ import 'package:advanced_icon/advanced_icon.dart';
 ## Features at a Glance
 
 1. An optional `secondaryIcon` property is available to enhance user interaction with minimal manual effort.
-2. A lot of cool animation effects are available to make smooth transition between `icon` and `secondaryIcon`.
+2. Cool animation effects are available to make smooth transition between `icon` and `secondaryIcon`.
 3. In addition to color, icons can also be painted with gradient.
 4. Opacity property is available to make opaque icons.
 5. Inherits all properties of material designed `Icon` widget.
@@ -98,8 +103,8 @@ class _ExampleState extends State<Example> {
 
 ```dart
 AdvancedIcon(
-  icon:Icons.favorite,
-  gradient:const LinearGradient(
+  icon: Icons.photo_camera,
+  gradient: const LinearGradient(
     colors: <Color>[Colors.red, Colors.pink],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
@@ -112,9 +117,9 @@ AdvancedIcon(
 
 ```dart
 AdvancedIcon(
-  icon:Icons.apple,
+  icon: Icons.direction_bike,
   color: Colors.blue,
-  opacity:0.5,
+  opacity: 0.5,
 )
 ```
 
