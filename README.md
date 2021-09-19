@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/ankitmishradev/advanced-icon/blob/main/display/banner.png?raw=true"/></p>
+![Header Image](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/images/banner.png?raw=true)
 
 # Advanced Icon
 
@@ -167,7 +167,7 @@ AdvancedIcon(
 )
 ```
 
-![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.svg?raw=true)
+![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/images/decoration_banner.svg?raw=true)
 
 ## Changelog
 
@@ -177,6 +177,6 @@ Please see the [changelog](https://github.com/ankitmishradev/advanced-icon/blob/
 
 Contribution to this project are most welcomed.
 
-If you find any bug or want any feature/improvement, but don't know how to fix/implement it, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/issues).
+If you find any bug or want any feature/improvement, but don't know how to fix/implement it, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/ISSUE_TEMPLATE.md).
 
 If you fixed any bug or implemented any new feature/improvement, please send a [pull request](https://github.com/ankitmishradev/advanced-icon/pulls).
