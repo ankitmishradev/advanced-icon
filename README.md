@@ -38,16 +38,14 @@ import 'package:advanced_icon/advanced_icon.dart';
 
 ## Icon Transition
 
-To use icon transition feature, `secondaryIcon` must not be null and when it is not null the widget will look up for `state` and will show icons according to current state. To change the icon from `icon` to `secondaryIcon` or vice-versa, let's first manage the state of the widget:
+To use icon transition feature, `secondaryIcon` must not be null and when it is not null the widget will look up for `state` and will show icons according to current state. To change the icon from `icon` to `secondaryIcon` or vice-versa, let's first see about `state` of `AdvancedIcon`:
 
-### 1. Manage state
-
-`state` holds the information about the current state of the widget. This widget can have any one of the following states:
+`state` holds the information about current state of `AdvancedIcon`. `AdvancedIcon` can have any one of the following states:
 
 1. `AdvancedIconState.primary`
 2. `AdvancedIconState.secondary`
 
-Whenever the state changes, it notifies the widget and widget changes the current icon following below rules:
+Whenever the state changes, it notifies `AdvancedIcon` and `AdvancedIcon` changes the current icon following below rules:
 
 1. `icon` will appear for `AdvancedIconState.primary`.
 2. `secondaryIcon` will appear for `AdvancedIconState.secondary`.
@@ -60,42 +58,37 @@ Whenever the state changes, it notifies the widget and widget changes the curren
 - inheritedWidget
 - or any other methods used for state management in flutter.
 
-Typically, setState will be used to change the state of the widget, as follows:
+We will use setState to illustrate state management of `AdvancedIcon`. First create a `stateful` widget then in private class define a property which holds current state of `AdvancedIcon` and define a function to change current state on every user interaction as follows:
 
 ```dart
-class Example extends StatefulWidget {
-  const Example({Key? key}) : super(key: key);
+AdvancedIconState _state = AdvancedIconState.primary;
 
-  @override
-  _ExampleState createState() => _ExampleState();
+void _changeState(){
+  setState(() {
+    if (_state == AdvancedIconState.primary) {
+      _state = AdvancedIconState.secondary;
+    } else {
+      _state == AdvancedIconState.primary;
+    }
+  });
 }
-
-class _ExampleState extends State<Example> {
-  AdvancedIconState _state=AdvancedIconState.primary;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          if (_state == AdvancedIconState.primary) {
-            _state = AdvancedIconState.secondary;
-          } else {
-            _state == AdvancedIconState.primary;
-          }
-        });
-      },
-      child: AdvancedIcon(
-        icon: Icons.add,
-        secondaryIcon: Icons.check,
-        state: \_state,
-        effect: AdvancedIconEffect.bubble,
-      ),
-    );
-  }
-}
-
 ```
+
+Then add a `GestureDetector` or `IconButton` inside `build` method and use `AdvancedIcon` as follows:
+
+```dart
+GestureDetector(
+  onTap: _changeState,
+  child: AdvancedIcon(
+    icon: Icons.add, //change this icon as per your requirement.
+    secondaryIcon: Icons.check, //change this icon as per your requirement.
+    state: _state,
+    effect: AdvancedIconEffect.bubble,
+  ),
+)
+```
+
+Now in this case when `_changeState` will be called, `state` will change to `AdvancedIconState.secondary` and transition will happen from `Icons.add` to `Icons.check` following the default bubble animation effect in 300ms.
 
 ## Decoration
 
@@ -123,9 +116,7 @@ AdvancedIcon(
 )
 ```
 
-### Decoration Result
-
-![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.png?raw=true)
+![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/display/decoration_banner.svg?raw=true)
 
 ## Changelog
 
