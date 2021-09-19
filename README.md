@@ -134,10 +134,9 @@ AdvancedIcon(
 )
 ```
 
-<div style="padding:36px;background-color:#161B22;border-radius:10px">
-<img src="https://github.com/ankitmishradev/advanced-icon/blob/main/docs/images/transition_banner.gif?raw=true" width="100%" style="border-radius:10px">
-</div>
+![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/images/transition_banner.svg?raw=true)
 
+<br>
 > To get better understanding, see live example [here](#).
 
 ## Decoration
