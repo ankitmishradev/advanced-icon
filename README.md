@@ -58,7 +58,7 @@ Whenever the state changes, it notifies `AdvancedIcon` and `AdvancedIcon` change
 - inheritedWidget
 - or any other methods used for state management in flutter.
 
-We will use setState to illustrate state management of `AdvancedIcon`. First create a `stateful` widget then in private class define a property which holds current state of `AdvancedIcon` and define a function to change current state on every user interaction as follows:
+Let's illustrate state management of `AdvancedIcon` using `setState`. First create a `stateful` widget then in private class define a property which holds current state of `AdvancedIcon` and define a function to change current state on every user interaction as follows:
 
 ```dart
 AdvancedIconState _state = AdvancedIconState.primary;
@@ -83,22 +83,71 @@ GestureDetector(
     icon: Icons.add, //change this icon as per your requirement.
     secondaryIcon: Icons.check, //change this icon as per your requirement.
     state: _state,
-    effect: AdvancedIconEffect.bubble,
   ),
 )
 ```
 
-Now in this case when `_changeState` will be called, `state` will change to `AdvancedIconState.secondary` and transition will happen from `Icons.add` to `Icons.check` following the default bubble animation effect in 300ms.
+> In above case when first time `_changeState` will be called, `state` will change to `AdvancedIconState.secondary` and transition will happen from `Icons.add` to `Icons.check` following the default bubble animation effect in 300ms.
+
+Let's configure it further. There are 7 cool animation effects availble for icon transition feature.
+
+1. spin
+2. bubble
+3. fade
+4. flipH
+5. flipV
+6. spinBubble
+7. bubbleFade
+8. none
+
+Change `effect` property to try more animation effects as follows:
+
+```dart
+AdvancedIcon(
+  icon: Icons.add, //change this icon as per your requirement.
+  secondaryIcon: Icons.check, //change this icon as per your requirement.
+  state: _state,
+  effect: AdvancedIconEffect.spin, //change effect as per your requirement.
+)
+```
+
+To increase or decrease the transition time, change `duration` property as follows:
+
+```dart
+AdvancedIcon(
+  icon: Icons.add, //change this icon as per your requirement.
+  secondaryIcon: Icons.check, //change this icon as per your requirement.
+  state: _state,
+  duration: Duration(milliseconds: 700),
+)
+```
+
+Give `secondaryIcon` a more specific color by setting `secondaryColor` property as follows:
+
+```dart
+AdvancedIcon(
+  icon: Icons.add, //change this icon as per your requirement.
+  secondaryIcon: Icons.check, //change this icon as per your requirement.
+  color: Colors.blue, //color of primary icon, change it as per your requirement
+  secondaryColor: Colors.green, //color of secondary icon, change it as per your requirement
+  state: _state,
+)
+```
+
+> To get better understanding, see live example [here](#).
 
 ## Decoration
 
 ### Gradient
 
+To make icons look more appealing use gradient to paint the icons. `color` and `secondaryColor` will be ignored if `gradient` is set as follows:
+
 ```dart
 AdvancedIcon(
   icon: Icons.photo_camera,
-  gradient: const LinearGradient(
-    colors: <Color>[Colors.red, Colors.green],
+  color: Colors.red, //color will have no effect
+  gradient: const LinearGradient( //change gradient as per your requirement
+    colors: <Color>[Colors.red, Colors.white],
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     step: [0.2,0.8],
@@ -108,11 +157,13 @@ AdvancedIcon(
 
 ### Opacity
 
+Make opaque icons by setting opacity as follows:
+
 ```dart
 AdvancedIcon(
   icon: Icons.direction_bike,
   color: Colors.red,
-  opacity: 0.5,
+  opacity: 0.5, //should be between 0 and 1 inclusive
 )
 ```
 
@@ -120,13 +171,11 @@ AdvancedIcon(
 
 ## Changelog
 
-Please see the [CHANGELOG](https://github.com/ankitmishradev/advanced-icon/blob/main/CHANGELOG.md) to know about the latest updates.
+Please see the [changelog](https://github.com/ankitmishradev/advanced-icon/blob/main/CHANGELOG.md) to know about the latest updates.
 
 ## Contributions
 
 Contribution to this project are most welcomed.
-
-## Bugs & Fixes
 
 If you find any bug or want any feature/improvement, but don't know how to fix/implement it, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/issues).
 
