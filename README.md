@@ -136,7 +136,6 @@ AdvancedIcon(
 
 ![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/images/transition_banner.svg?raw=true)
 
-<br>
 > To get better understanding, see live example [here](#).
 
 ## Decoration
