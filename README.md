@@ -1,4 +1,4 @@
-![Header Image](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/images/banner.png?raw=true)
+![Header Image](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/images/banner.svg?raw=true)
 
 # Advanced Icon
 

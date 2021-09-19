@@ -1,41 +1,39 @@
----
-name: Bug report
-about: Create a report to help us improve
----
+# Prerequisites
 
-## Prerequisites
+Please answer the following questions for yourself before submitting an issue.
 
-<!--Please put an X between square brackets in below lines if your issue complies with given points-->
+- [ ] I am running the latest version
+- [ ] I checked the documentation and found no answer
+- [ ] I checked to make sure that this issue has not already been filed
 
-- [ ] [Code of conduct](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/CODE_OF_CONDUCT.md) is maintained throughout the process.
-- [ ] Issue isn't already filed in [Issues](https://github.com/ankitmishradev/advanced-icon/issues).
+# Expected Behavior
 
-## Description
+Please describe the behavior you are expecting
 
-<!-- Description of the issue -->
+# Current Behavior
 
-### Steps to Reproduce
+What is the current behavior?
 
-1. <!-- First Step -->
-2. <!-- Second Step -->
-3. <!-- and so on… -->
+# Failure Information (for bugs)
 
-### Expected behavior
+Please help provide information about the failure if this is a bug. If it is not a bug, please remove the rest of this template.
 
-<!-- What you expect to happen -->
+## Steps to Reproduce
 
-### Actual behavior
+Please provide detailed steps for reproducing the issue.
 
-<!-- What actually happens -->
+1. step 1
+2. step 2
+3. you get it...
 
-### Reproduces how often
+## Context
 
-<!-- What percentage of the time does it reproduce? -->
+Please provide any relevant information about your setup. This is important in case the issue is not reproducible except for under certain conditions.
 
-## Versions
+- Operating System:
+- Dart version:
+- Flutter SDK version:
 
-<!-- Versions of the package in which you have exprience the issue -->
+## Failure Logs
 
-## Additional Information
-
-<!-- Any additional information, configuration or data that might be necessary to reproduce the issue. If there's nothing you want to mention here, please remove this block -->
+Please include any relevant log snippets or files here.
