@@ -140,7 +140,7 @@ AdvancedIcon(
 
 ### Gradient
 
-To make icons look more appealing use gradient to paint the icons. `color` and `secondaryColor` will be ignored if `gradient` is set as follows:
+To make icons look more appealing, use gradient to paint the icons. `color` and `secondaryColor` will be ignored if `gradient` is set as follows:
 
 ```dart
 AdvancedIcon(
