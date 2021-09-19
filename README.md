@@ -179,4 +179,4 @@ Contribution to this project are most welcomed.
 
 If you find any bug or want any feature/improvement, but don't know how to fix/implement it, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/ISSUE_TEMPLATE.md).
 
-If you fixed any bug or implemented any new feature/improvement, please send a [pull request](https://github.com/ankitmishradev/advanced-icon/docs/PULL_REQUEST_TEMPLATE.md).
+If you fixed any bug or implemented any new feature/improvement, please send a [pull request](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/PULL_REQUEST_TEMPLATE.md).
