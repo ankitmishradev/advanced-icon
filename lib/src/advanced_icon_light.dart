@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AdvancedIconLight extends StatelessWidget {
-  ///Creates an enhanced icon widget.
+  ///Creates an icon widget which contains collection of icon decoration tools such as gradient and opacity.
   ///
-  ///This widget is lighter form of [AdvancedIcon].
-  ///Advanced icon light is smart enough to build the lightest widget tree possible for the given configuration without affecting the performance.
+  ///This widget is lighter form of [AdvancedIcon] and inherits all properties of material designes [Icon] widget. Advanced icon light is smart enough to build the lightest widget tree possible for given properties without affecting the performance.
   ///
   ///For example:
-  /// * Advanced icon light does not use any opaque functionalities unless [opacity] is specified or [effect] includes one of the fading animations.
-  /// * Advanced icon light does not use [ShaderMask] to paint icons unless [gradient] is specified.
-  ///
-  /// See also:
-  /// * [AdvancedIconLight], a lighter form of this widget.
+  /// * Advanced icon light does not use opaque functionalities unless [opacity] property is set.
+  /// * Advanced icon light does not use gradient functionalities unless [gradient] property is set.
   const AdvancedIconLight(
     this.icon, {
     Key? key,
@@ -34,17 +30,17 @@ class AdvancedIconLight extends StatelessWidget {
   /// [IconTheme], or it does not specify an explicit size, then it defaults to
   /// 24.0.
   ///
-  /// If this [AdvancedIconLight] is being placed inside an [IconButton], then use
+  /// If [AdvancedIconLight] is being placed inside an [IconButton], then use
   /// [IconButton.iconSize] instead, so that the [IconButton] can make the splash
   /// area the appropriate size as well. The [IconButton] uses an [IconTheme] to
   /// pass down the size to the [AdvancedIconLight].
   final double? size;
 
-  ///A gradient to use when filling the icon.
+  /// The gradient to use when drawing the icon.
   ///
   /// If this is specified, [color] has no effect.
   ///
-  /// The [gradient] is drawn under the [AdvancedIcon].
+  /// The [gradient] is drawn over the [AdvancedIconLight].
   /// {@tool snippet}
   /// Typically, Material Design colors will be used to draw gradient, as follows:
   ///
@@ -92,12 +88,21 @@ class AdvancedIconLight extends StatelessWidget {
   /// {@end-tool}
   final Color? color;
 
-  ///The fraction to scale the icon's alpha value.
+  ///The fraction to scale the [AdvancedIconLight]'s transparency.
   ///
   ///An opacity of 1.0 is fully opaque. An opacity of 0.0 is fully transparent (i.e., invisible).
   ///
   ///Values 1.0 and 0.0 are painted with a fast path. Other values require painting the child into an intermediate buffer, which is expensive.
   final double? opacity;
+
+  ///The text direction to use for rendering the icon.
+  ///
+  ///If this is null, the ambient [Directionality] is used instead.
+  ///
+  ///Some icons follow the reading direction. For example, "back" buttons point left in left-to-right environments and right in right-to-left environments. Such icons have their [IconData.matchTextDirection] field set to true, and the [AdvancedIconLight] widget uses the [textDirection] to determine the orientation in which to draw the icon.
+  ///
+  ///This property has no effect if the [icon]'s [IconData.matchTextDirection] field is false, but for consistency a text direction value must always be specified, either directly using this property or using [Directionality].
+  final TextDirection? textDirection;
 
   ///Semantic label for the icon.
   ///
@@ -105,15 +110,6 @@ class AdvancedIconLight extends StatelessWidget {
   ///
   /// * [SemanticsProperties.label], which is set to [semanticLabel] in the underlying [Semantics] widget.
   final String? semanticLabel;
-
-  ///The text direction to use for rendering the icon.
-  ///
-  ///If this is null, the ambient [Directionality] is used instead.
-  ///
-  ///Some icons follow the reading direction. For example, "back" buttons point left in left-to-right environments and right in right-to-left environments. Such icons have their [IconData.matchTextDirection] field set to true, and the [Icon] widget uses the [textDirection] to determine the orientation in which to draw the icon.
-  ///
-  ///This property has no effect if the [icon]'s [IconData.matchTextDirection] field is false, but for consistency a text direction value must always be specified, either directly using this property or using [Directionality].
-  final TextDirection? textDirection;
 
   @override
   Widget build(BuildContext context) {

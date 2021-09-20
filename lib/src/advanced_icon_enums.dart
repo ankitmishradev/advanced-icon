@@ -1,31 +1,31 @@
-///Runs the animation while chaning the state of [AdvancedIcon].
+///Icon transition effects.
 enum AdvancedIconEffect {
-  ///Changes the icons by spinning them.
+  ///Spin transition effect.
   spin,
 
-  ///Changes the icons by scaling them.
+  ///Bubble transition effect.
   bubble,
 
-  ///Changes the icons by fading them.
+  ///Fade transition effect.
   fade,
 
-  ///Changes the icons by flipping them horizontally.
+  ///Horizontal flip transition effect.
   flipH,
 
-  ///Changes the icons by flipping them vertically.
+  ///Vertical flip transition effect.
   flipV,
 
-  ///Changes the icon by spinning and scaling them.
+  ///Spin and bubble transition effect.
   spinBubble,
 
-  ///Changes the icon by scaling and fading them.
+  ///Bubble and fade transition effect.
   bubbleFade,
 
-  ///Changes the icon without any effect.
+  ///No transition effect.
   none
 }
 
-///Stores the current state of [AdvancedIcon].
+///States of advanced icon.
 enum AdvancedIconState {
   ///Primary state.
   primary,

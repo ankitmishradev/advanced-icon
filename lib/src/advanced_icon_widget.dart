@@ -42,7 +42,8 @@ class AdvancedIcon extends StatefulWidget {
 
   /// The icon to display.
   ///
-  /// The icon can not be null. If [secondaryIcon] is specified along with the icon then the icon will be rendered only for [AdvancedIconState.primary].
+  /// The icon can not be null. If [secondaryIcon] is also set with icon,
+  /// icon will render only for [AdvancedIconState.primary].
   ///
   /// See also:
   /// * [AdvancedIconState], configures the state of the widget.
@@ -50,11 +51,14 @@ class AdvancedIcon extends StatefulWidget {
 
   /// An optional icon to display along with [icon].
   ///
-  /// This icon will only be rendered for [AdvancedIconState.secondary]. Secondary icon can be null, in which case the load of state changing and animation effects will not be added to the widget and only [icon] will be rendered hence it will make the widget lighter.
+  /// This icon will only be rendered for [AdvancedIconState.secondary].
+  /// The secondary icon can be null, in which case the widget will neglect
+  /// the state management process and render the icon consequently
+  /// making the widget lighter.
   ///
   /// See also:
   /// * [AdvancedIconLight], a lighter form of [AdvancedIcon].
-  /// * [AdvancedIconState], configures the state of the widget.
+  /// * [AdvancedIconState], states of advanced icon widget.
   final IconData? secondaryIcon;
 
   /// The size of the icon in logical pixels.
@@ -73,11 +77,12 @@ class AdvancedIcon extends StatefulWidget {
   /// * Both [icon] and [secondaryIcon](if not null) have the same size as mentioned above.
   final double? size;
 
-  ///A gradient to use when filling the icon.
+  /// The gradient to use when drawing the icon/icons.
   ///
   /// If this is specified, [color] and [secondaryColor] has no effect.
   ///
-  /// The [gradient] is drawn under the [AdvancedIcon].
+  /// The [gradient] is drawn over the [AdvancedIcon].
+  ///
   /// {@tool snippet}
   /// Typically, Material Design colors will be used to draw gradient, as follows:
   ///
@@ -95,7 +100,7 @@ class AdvancedIcon extends StatefulWidget {
   /// {@end-tool}
   final Gradient? gradient;
 
-  /// The color to use when drawing the [icon] and the same color will be used to draw [secondaryIcon] unless [secondaryColor] is specified
+  /// The color to use when drawing the [icon] or [secondaryIcon].
   ///
   /// Defaults to the current [IconTheme] color, if any.
   ///
@@ -123,12 +128,12 @@ class AdvancedIcon extends StatefulWidget {
   /// )
   /// ```
   /// {@end-tool}
-  /// The above snippet will result in yellow colored circle icon 🟡.
+  /// The above snippet will result in yellow colored circle icon (🟡).
   final Color? color;
 
-  ///An optional color to use when drawing the [secondaryIcon].
+  /// An optional color to use when drawing the [secondaryIcon].
   ///
-  /// Defaults to the current [IconTheme] color, if any.
+  /// Defaults to [color] if that is null defaults to the current [IconTheme] color, if any.
   ///
   /// The color (whether specified explicitly here or obtained from the
   /// [IconTheme]) will be further adjusted by the opacity of the current
@@ -157,24 +162,24 @@ class AdvancedIcon extends StatefulWidget {
   /// ```
   /// {@end-tool}
   ///
-  /// The above snippet will result in white colored add icon ➕ and green colored check icon ✔️.
+  /// The above snippet will result in white colored add icon (➕) and green colored check icon (✔️).
   final Color? secondaryColor;
 
-  ///The fraction to scale the icon's alpha value.
+  ///The fraction to scale the [AdvancedIcon]'s transparency..
   ///
   ///An opacity of 1.0 is fully opaque. An opacity of 0.0 is fully transparent (i.e., invisible).
   ///
   ///Values 1.0 and 0.0 are painted with a fast path. Other values require painting the child into an intermediate buffer, which is expensive.
   ///
-  /// * [opacity] will affect both [icon] and [secondaryIcon](if not null).
-  /// * For every [AdvancedIconEffect] which includes fade effect, fading range will be from [opacity] to 0.0 if it is not null.
+  /// * For every [AdvancedIconEffect] which includes fade effect, fading range will be from [opacity] to 0.
   final double? opacity;
 
   ///State of the widget.
   ///
   ///State can not be null and it defaults to [AdvancedIconState.primary].
-  ///[Icon] will render for [AdvancedIconState.primary] and [secondaryIcon] will render for [AdvancedIconState.secondary].
-  ///While changing the state, specified animation will take place for the given duration except in the case of [AdvancedIconEffect.none].
+  ///Whenever the state changes, it notifies [AdvancedIcon] and [AdvancedIcon] changes the current icon to
+  ///[icon] for [AdvancedIconState.primary] and to [secondaryIcon] for [AdvancedIconState.secondary].
+  ///Icons will change on screen following the transition effect set in [effect] which will last for given [duration].
   ///
   ///{@tool snippet}
   /// Typically, [setState] will be used to change the state of [AdvancedIcon], as follows:
@@ -216,32 +221,31 @@ class AdvancedIcon extends StatefulWidget {
   ///
   /// Above snippet will give following result:
   ///
-  /// Firstly ➕ icon will render on screen and when ➕ will be tapped, widget will change it's state from primary to secondary and running
-  /// the bubble animation in 0.3s and ✔️ will render on screen.
+  /// The first time when [GestureDetector] will detect tap,
+  /// the state will change to [AdvancedIconState.secondary] and
+  /// the transition will happen from ➕ to ✔️ following
+  /// the default bubble transition effect in 300ms.
   ///
   /// See also:
-  /// * [setState], notify the framework that the internal state of this object has changed.
-  /// * [AdvancedIconEffect], animation while changing the state of the widget.
-  /// * [AdvancedIconState], configures the state of the widget.
+  /// * [AdvancedIconEffect], icon transition effects.
+  /// * [AdvancedIconState], states of advanced icon widget.
   final AdvancedIconState state;
 
-  ///Animation while changing the state of the widget.
+  ///Icon transition effect for the widget.
   ///
-  ///The widget changes it's state between the values of [AdvancedIconState]. The animation runs forward for [AdvancedIconState.primary] to [AdvancedIconState.secondary] and reverse for vice-verse.
-  ///Effect can not be null though it does not have any effect if secondaryIcon is null.
-  ///
-  ///[AdvancedIconEffect.none] is lighter than all other values because it doesn't create any controller or animation for the widget hence state of the widget changes quickly without any animation.
+  ///Effect can not be null though it does not have any effect
+  ///if secondaryIcon is null. [AdvancedIconEffect.none] is faster than other effects
+  ///because it doesn't create any controller or animation for the widget,
+  ///hence state changes quickly without transition.
   ///
   ///See also:
-  /// * [AdvancedIconEffect], animation while changing the state of the widget.
-  /// * [AdvancedIconState], configures the state of the widget.
+  /// * [AdvancedIconEffect], icon transition effects.
+  /// * [AdvancedIconState], states of advanced icon widget.
   final AdvancedIconEffect effect;
 
-  ///The length of time widget will take to change state between [AdvancedIconState.primary] and [AdvancedIconState.secondary] running the animation given in [effect].
+  ///The length of the time icon transition will last.
   ///
   ///Defaults to 0.3 second.
-  ///
-  /// * For [AdvancedIconEffect.none] state changing takes no time.
   final Duration? duration;
 
   /// The text direction to use for rendering the icon.
@@ -251,7 +255,7 @@ class AdvancedIcon extends StatefulWidget {
   /// Some icons follow the reading direction. For example, "back" buttons point
   /// left in left-to-right environments and right in right-to-left
   /// environments. Such icons have their [IconData.matchTextDirection] field
-  /// set to true, and the [Icon] widget uses the [textDirection] to determine
+  /// set to true, and the [AdvancedIcon] widget uses the [textDirection] to determine
   /// the orientation in which to draw the icon.
   ///
   /// This property has no effect if the [icon]'s [IconData.matchTextDirection]

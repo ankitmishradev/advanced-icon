@@ -2,7 +2,7 @@
 
 # Advanced Icon
 
-A flutter package which contains collection of icon decoration tools such as gradient, opacity and icon transition feature with cool animation effects.
+A flutter package that contains a collection of icon decoration tools (i.e. gradient, opacity) and icon transition features with cool animation effects.
 
 [![Build Status](https://img.shields.io/github/workflow/status/ankitmishradev/advanced-icon/build/main)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)
 [![MIT License](https://img.shields.io/github/license/ankitmishradev/advanced-icon?color=red)](https://opensource.org/licenses/MIT)
@@ -31,21 +31,21 @@ import 'package:advanced_icon/advanced_icon.dart';
 ## Features at a Glance
 
 1. An optional `secondaryIcon` property is available to enhance user interaction with minimal manual effort.
-2. Cool animation effects are available to make smooth transition between `icon` and `secondaryIcon`.
-3. In addition to color, icons can also be painted with gradient.
+2. Cool animation effects are available to make a smooth transition between `icon` and `secondaryIcon`.
+3. In addition to color, icons can also be painted with a gradient.
 4. Opacity property is available to make opaque icons.
 5. Inherits all properties of material designed `Icon` widget.
 
 ## Icon Transition
 
-To use icon transition feature, `secondaryIcon` must not be null and when it is not null the widget will look up for `state` and will show icons according to current state. To change the icon from `icon` to `secondaryIcon` or vice-versa, let's first see about `state` of `AdvancedIcon`:
+To use the icon transition feature, `secondaryIcon` must not be null and when it is not null the widget will lookup for `state` and will show icons according to the current state. To change the icon from `icon` to `secondaryIcon` or vice-versa, let's first see about `state` of `AdvancedIcon`:
 
-`state` holds the information about current state of `AdvancedIcon`. `AdvancedIcon` can have any one of the following states:
+`state` holds the information about the current state of `AdvancedIcon`. `AdvancedIcon` can have any one of the following states:
 
 1. `AdvancedIconState.primary`
 2. `AdvancedIconState.secondary`
 
-Whenever the state changes, it notifies `AdvancedIcon` and `AdvancedIcon` changes the current icon following below rules:
+Whenever the state changes, it notifies `AdvancedIcon` and `AdvancedIcon` changes the current icon following the below rules:
 
 1. `icon` will appear for `AdvancedIconState.primary`.
 2. `secondaryIcon` will appear for `AdvancedIconState.secondary`.
@@ -58,7 +58,7 @@ Whenever the state changes, it notifies `AdvancedIcon` and `AdvancedIcon` change
 - inheritedWidget
 - or any other methods used for state management in flutter.
 
-Let's illustrate state management of `AdvancedIcon` using `setState`. First create a `stateful` widget then in private class define a property which holds current state of `AdvancedIcon` and define a function to change current state on every user interaction as follows:
+Let's illustrate state management of `AdvancedIcon` using `setState`. First, create a `stateful` widget. In the private class of the widget, define a property that holds the current state of `AdvancedIcon` and define a function to change the current state on every user interaction as follows:
 
 ```dart
 AdvancedIconState _state = AdvancedIconState.primary;
@@ -89,7 +89,7 @@ GestureDetector(
 
 > In above case when first time `_changeState` will be called, `state` will change to `AdvancedIconState.secondary` and transition will happen from `Icons.add` to `Icons.check` following the default bubble animation effect in 300ms.
 
-Let's configure it further. There are 7 cool animation effects availble for icon transition feature.
+Let's configure it further. There are seven cool transition effects available for icon transition features.
 
 1. spin
 2. bubble
@@ -179,6 +179,6 @@ Please see the [changelog](https://github.com/ankitmishradev/advanced-icon/blob/
 
 Contribution to this project are most welcomed.
 
-If you find any bug or want any feature/improvement, but don't know how to fix/implement it, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/ISSUE_TEMPLATE.md).
+If you find any bugs or want more features, but don't know how to fix/implement them, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/ISSUE_TEMPLATE.md).
 
-If you fixed any bug or implemented any new feature/improvement, please send a [pull request](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/PULL_REQUEST_TEMPLATE.md).
+If you fixed any bug or implemented new features, please send a [pull request](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/PULL_REQUEST_TEMPLATE.md).

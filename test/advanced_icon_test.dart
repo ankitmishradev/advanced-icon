@@ -106,7 +106,8 @@ void main() {
     final Finder finder = find.byType(Icon);
     expect(finder, findsNWidgets(2));
   });
-  testWidgets("Render two icons (clear and search) with no transition effect",
+
+  testWidgets("Render two icons with no transition effect",
       (WidgetTester tester) async {
     const IconData firstIconData = Icons.search;
     const IconData secondIconData = Icons.clear;
@@ -133,6 +134,39 @@ void main() {
       ),
     );
     final Finder finder2 = find.byIcon(secondIconData);
+    expect(finder2, findsOneWidget);
+  });
+
+  testWidgets("Render two icons with any transition effect",
+      (WidgetTester tester) async {
+    const IconData firstIconData = Icons.search;
+    const IconData secondIconData = Icons.clear;
+    await tester.pumpWidget(
+      injectChildInApp(
+        const AdvancedIcon(
+          icon: firstIconData,
+          secondaryIcon: secondIconData,
+          state: AdvancedIconState.primary,
+          effect: AdvancedIconEffect.spin,
+        ),
+      ),
+    );
+    expect(
+      find.ancestor(
+          of: find.widgetWithIcon(Positioned, firstIconData),
+          matching: find.byType(Stack)),
+      findsOneWidget,
+    );
+    expect(
+      find.ancestor(
+          of: find.widgetWithIcon(Positioned, secondIconData),
+          matching: find.byType(Stack)),
+      findsOneWidget,
+    );
+    expect(find.byType(Positioned), findsNWidgets(2));
+    final Finder finder = find.widgetWithIcon(Transform, firstIconData);
+    expect(finder, findsOneWidget);
+    final Finder finder2 = find.widgetWithIcon(Transform, secondIconData);
     expect(finder2, findsOneWidget);
   });
 }
