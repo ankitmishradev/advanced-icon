@@ -6,6 +6,8 @@ A flutter package that contains a collection of icon decoration tools (i.e. grad
 
 [![Build Status](https://img.shields.io/github/workflow/status/ankitmishradev/advanced-icon/build/main)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)
 [![MIT License](https://img.shields.io/github/license/ankitmishradev/advanced-icon?color=red)](https://opensource.org/licenses/MIT)
+[![codecov](https://codecov.io/gh/ankitmishradev/advanced-icon/branch/main/graph/badge.svg?token=OOEJ4AMS9Q)](https://codecov.io/gh/ankitmishradev/advanced-icon)
+[![CodeFactor](https://www.codefactor.io/repository/github/ankitmishradev/advanced-icon/badge)](https://www.codefactor.io/repository/github/ankitmishradev/advanced-icon)
 
 ## Installing
 

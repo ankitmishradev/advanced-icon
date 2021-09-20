@@ -53,7 +53,7 @@ class AnimationDemoScreen extends StatelessWidget {
               secondaryIcon: Icons.grid_view,
               caption: 'Fade',
               effect: AdvancedIconEffect.fade,
-              color: Colors.grey[800]!,
+              color: Colors.grey[800],
             ),
             HybridIconContainer(
               icon: Icons.first_page_rounded,
