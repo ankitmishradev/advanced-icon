@@ -352,7 +352,7 @@ class _AdvancedIconState extends State<AdvancedIcon>
 
   AdvancedIconLight _buildChild(AdvancedIconState state) {
     final double? opacity;
-    final IconData? icon;
+    final IconData icon;
     final Color? color;
 
     double? calcOpacity() {
@@ -375,14 +375,14 @@ class _AdvancedIconState extends State<AdvancedIcon>
         opacity = widget.secondaryIcon == null ? widget.opacity : calcOpacity();
         break;
       case AdvancedIconState.secondary:
-        icon = widget.secondaryIcon;
+        icon = widget.secondaryIcon!;
         color = widget.secondaryColor ?? widget.color;
         opacity = calcOpacity();
         break;
     }
 
     return AdvancedIconLight(
-      icon!,
+      icon,
       color: color,
       size: widget.size,
       gradient: widget.gradient,
