@@ -179,6 +179,6 @@ Please see the [changelog](https://github.com/ankitmishradev/advanced-icon/blob/
 
 Contribution to this project are most welcomed.
 
-If you find any bugs or want more features, but don't know how to fix/implement them, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/ISSUE_TEMPLATE.md).
+If you find bugs or want more features, but don't know how to fix/implement them, please fill an [issue](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/ISSUE_TEMPLATE.md).
 
-If you fixed any bug or implemented new features, please send a [pull request](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/PULL_REQUEST_TEMPLATE.md).
+If you fixed bugs or implemented new features, please send a [pull request](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/PULL_REQUEST_TEMPLATE.md).
