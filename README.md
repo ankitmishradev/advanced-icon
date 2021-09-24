@@ -172,7 +172,7 @@ AdvancedIcon(
 )
 ```
 
-![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/assets/images/transition_banner.svg?raw=true)
+![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/assets/images/decoration_banner.svg?raw=true)
 
 ## Changelog
 
