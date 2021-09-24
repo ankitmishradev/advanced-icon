@@ -1,5 +1,7 @@
 # 0.1.1
-- Update package banners paths.
+
+- Add live example.
+- Update banner paths.
 
 # 0.1.0
 
