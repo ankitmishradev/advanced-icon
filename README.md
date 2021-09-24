@@ -2,7 +2,7 @@
 
 # Advanced Icon
 
-A flutter package that contains a collection of icon decoration tools (i.e. gradient, opacity) and icon transition features with cool animation effects.
+A flutter package that contains a collection of icon decoration tools (i.e. gradient, opacity) and icon transition features with cool animation effects. [See live example](https://advanced-icon-usage.web.app/#/).
 
 [![Pub Version](https://img.shields.io/pub/v/advanced_icon?color=blue)](https://pub.dev/packages/advanced_icon)
 [![Build Status](https://img.shields.io/github/workflow/status/ankitmishradev/advanced-icon/build/main)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)

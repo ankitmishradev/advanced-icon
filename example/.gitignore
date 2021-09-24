@@ -8,7 +8,10 @@
 .buildlog/
 .history
 .svn/
-
+.firebaserc
+.firebase/
+database.rules.json
+firebase.json
 # IntelliJ related
 *.iml
 *.ipr
