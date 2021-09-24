@@ -18,11 +18,11 @@ class Section extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
         boxShadow: kElevationToShadow[3],
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          stops: const [0.2, 0.8],
-          colors: [Colors.blueGrey[200]!, Colors.blueGrey[50]!],
+          stops: [0.2, 0.8],
+          colors: [Color(0xFF0D1117), Color(0xFF161B22)],
         ),
       ),
       child: Column(
@@ -40,6 +40,7 @@ class Section extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: theme.textTheme.caption!.copyWith(
                     fontSize: 16.0,
+                    color: Colors.white70,
                     fontWeight: FontWeight.w600,
                   ),
                 )

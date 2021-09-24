@@ -19,7 +19,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Animated Flutter Icon',
       theme: ThemeData(
-        primarySwatch: Colors.teal,
+        brightness: Brightness.dark,
+        primaryColor: const Color(0xFF161B22),
+        scaffoldBackgroundColor: const Color(0xFF212933),
         tabBarTheme: const TabBarTheme(
           unselectedLabelStyle: TextStyle(
             inherit: true,

@@ -13,8 +13,16 @@ class HomeScreen extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Advanced Icon'),
+          backgroundColor: Theme.of(context).primaryColor,
+          centerTitle: true,
+          title: const Text(
+            'Advanced Icon',
+            style: TextStyle(
+              fontSize: 30,
+            ),
+          ),
           bottom: const TabBar(
+            indicatorColor: Colors.white70,
             tabs: [Tab(text: 'Icon Transition'), Tab(text: 'Icon Decoration')],
           ),
         ),
