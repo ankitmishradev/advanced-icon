@@ -15,9 +15,7 @@ class AnimationDemoScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       children: [
-        const Heading('Chaging state between two icon'),
-        const Caption(
-            'Using ADVACNED ICON package, flutter developers can change state between two icon using various animation effects which enhances user experience of the app.'),
+        const Heading('Icon Transition'),
         GridView(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,

@@ -16,9 +16,7 @@ class DecorationDemoScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       children: [
-        const Heading('Decorating icons with gradient'),
-        const Caption(
-            'Using ADVACNED ICON package flutter developers can decorate icons in the app with COLOR and GRADIENT to make icons look more appealing. The icons with gradient enhances the user experience of the app.'),
+        const Heading('Icon Decoration(i.e. Gradient, Opacity)'),
         GridView(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
