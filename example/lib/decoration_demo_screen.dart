@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:advanced_icon/advanced_icon.dart';
 
-import 'widget/heading.dart';
 import 'widget/section.dart';
-import 'widget/caption.dart';
 
 const double _sectionHeight = 136.0;
 const double _iconSize = 56;
@@ -16,7 +14,6 @@ class DecorationDemoScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       children: [
-        const Heading('Icon Decoration(i.e. Gradient, Opacity)'),
         GridView(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,

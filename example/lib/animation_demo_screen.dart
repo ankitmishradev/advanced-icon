@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:advanced_icon/advanced_icon.dart';
 
-import 'widget/heading.dart';
-import 'widget/caption.dart';
 import 'widget/hybrid_icon.dart';
 
 const double _sectionHeight = 136.0;
@@ -15,7 +13,6 @@ class AnimationDemoScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       children: [
-        const Heading('Icon Transition'),
         GridView(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,

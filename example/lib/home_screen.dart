@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Advanced Icon'),
           bottom: const TabBar(
-            tabs: [Tab(text: 'Animation'), Tab(text: 'Decoration')],
+            tabs: [Tab(text: 'Icon Transition'), Tab(text: 'Icon Decoration')],
           ),
         ),
         body: const TabBarView(children: [
