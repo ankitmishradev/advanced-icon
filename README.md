@@ -1,9 +1,10 @@
-![Header Image](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/images/banner.svg?raw=true)
+![Header Image](https://github.com/ankitmishradev/advanced-icon/blob/main/assets/images/banner.svg?raw=true)
 
 # Advanced Icon
 
 A flutter package that contains a collection of icon decoration tools (i.e. gradient, opacity) and icon transition features with cool animation effects.
 
+[![Pub Version](https://img.shields.io/pub/v/advanced_icon?color=blue)](https://pub.dev/packages/advanced_icon)
 [![Build Status](https://img.shields.io/github/workflow/status/ankitmishradev/advanced-icon/build/main)](https://github.com/ankitmishradev/advanced-icon/actions/workflows/main.yml)
 [![MIT License](https://img.shields.io/github/license/ankitmishradev/advanced-icon?color=red)](https://opensource.org/licenses/MIT)
 [![codecov](https://img.shields.io/badge/Awesome-Flutter-FC60A8?logo=awesome-lists)](https://flutterawesome.com/a-flutter-package-which-contains-collection-of-icon-decoration-tools-such-as-gradient/)
@@ -136,7 +137,7 @@ AdvancedIcon(
 )
 ```
 
-![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/images/transition_banner.svg?raw=true)
+![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/assets/images/transition_banner.svg?raw=true)
 
 > To get better understanding, see live example [here](#).
 
@@ -171,7 +172,7 @@ AdvancedIcon(
 )
 ```
 
-![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/docs/images/decoration_banner.svg?raw=true)
+![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/assets/images/transition_banner.svg?raw=true)
 
 ## Changelog
 
