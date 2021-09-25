@@ -1,6 +1,6 @@
 name: advanced_icon
 description: A flutter package that contains a collection of icon decoration tools (i.e. gradient, opacity) and icon transition features with cool animation effects.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/ankitmishradev/advanced-icon
 repository: https://github.com/ankitmishradev/advanced-icon
 

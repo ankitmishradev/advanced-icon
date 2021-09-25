@@ -1,3 +1,7 @@
+# 0.1.2
+
+- Update banners of this package
+
 # 0.1.1
 
 - Add live example.
