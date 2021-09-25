@@ -139,7 +139,7 @@ AdvancedIcon(
 )
 ```
 
-![Transition Banner](https://github.com/ankitmishradev/advanced-icon/blob/main/assets/banners/transition_banner.gif?raw=true)
+<img src="https://github.com/ankitmishradev/advanced-icon/blob/main/assets/banners/transition_banner.gif?raw=true" width="100%"/>
 
 > To get better understanding, [see live example](https://advanced-icon-usage.web.app/#/).
 
