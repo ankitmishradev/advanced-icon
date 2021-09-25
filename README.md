@@ -1,4 +1,4 @@
-![Header Image](https://github.com/ankitmishradev/advanced-icon/blob/main/assets/images/banner.gif?raw=true)
+<img src="https://github.com/ankitmishradev/advanced-icon/blob/main/assets/banners/banner.gif?raw=true" width="100%">
 
 # Advanced Icon
 
@@ -105,8 +105,6 @@ Let's configure it further. There are seven cool transition effects available fo
 
 Change `effect` property to try more animation effects as follows:
 
-<img src="https://github.com/ankitmishradev/advanced-icon/blob/main/assets/images/effects_banner.gif?raw=true" align= "right">
-
 ```dart
 AdvancedIcon(
   icon: Icons.add, //change this icon as per your requirement.
@@ -116,7 +114,6 @@ AdvancedIcon(
 )
 ```
 
-<img src="https://github.com/ankitmishradev/advanced-icon/blob/main/assets/images/duration_banner.gif?raw=true" align= "right">
 To increase or decrease the transition time, change `duration` property as follows:
 
 ```dart
@@ -129,7 +126,6 @@ AdvancedIcon(
 )
 ```
 
-<img src="https://github.com/ankitmishradev/advanced-icon/blob/main/assets/images/double_color_banner.gif?raw=true" align= "right">
 Give `secondaryIcon` a more specific color by setting `secondaryColor` property as follows:
 
 ```dart
@@ -143,7 +139,9 @@ AdvancedIcon(
 )
 ```
 
-> To get better understanding, see live example [here](https://advanced-icon-usage.web.app/#/).
+![Transition Banner](https://github.com/ankitmishradev/advanced-icon/blob/main/assets/banners/transition_banner.gif?raw=true)
+
+> To get better understanding, [see live example](https://advanced-icon-usage.web.app/#/).
 
 ## Decoration
 
@@ -176,7 +174,7 @@ AdvancedIcon(
 )
 ```
 
-![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/assets/images/decoration_banner.png?raw=true)
+![Decoration banner](https://github.com/ankitmishradev/advanced-icon/blob/main/assets/banners/decoration_banner.png?raw=true)
 
 ## Changelog
 
